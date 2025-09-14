@@ -86,7 +86,7 @@ export default function Home() {
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     Available for work
                   </div>
-                  <div>{"浙江 · 嘉兴"}</div>
+                  <div>{"中国 · 广东"}</div>
                 </div>
               </div>
             </div>
