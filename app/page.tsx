@@ -322,12 +322,7 @@ export default function Home() {
                     href="mailto:info@xiajianting.com"
                     className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
                   >
-                    <span
-                      className="text-base sm:text-lg"
-                      onClick={() => (window.location.href = "mailto:info@xiajianting.com")}
-                    >
-                      邮箱：info@xiajianting.com
-                    </span>
+                    <span className="text-base sm:text-lg">邮箱：info@xiajianting.com</span>
                     <svg
                       className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
                       fill="none"
@@ -338,11 +333,11 @@ export default function Home() {
                     </svg>
                   </Link>
 
-                  <Link className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300">
-                    <span onClick={() => setShowWeChatModal(true)} className="text-base sm:text-lg">
-                      微信：natsu_go
-                    </span>
-
+                  <button
+                    onClick={() => setShowWeChatModal(true)}
+                    className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300 bg-transparent border-none p-0 cursor-pointer"
+                  >
+                    <span className="text-base sm:text-lg">微信：natsu_go</span>
                     <svg
                       className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
                       fill="none"
@@ -351,7 +346,7 @@ export default function Home() {
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -369,7 +364,7 @@ export default function Home() {
                   {
                     name: "飞书",
                     handle: "@夏健庭",
-                    url: "https://www.feishu.cn/invitation/page/add_contact/?token=a42q9cfc-4d20-4015-a0ca-5e289ae90179&amp;unique_id=NHwX6tl7z5bfrsIF-ygypg==",
+                    url: "https://www.feishu.cn/invitation/page/add_contact/?token=a42q9cfc-4d20-4015-a0ca-5e289ae90179&unique_id=NHwX6tl7z5bfrsIF-ygypg==",
                   },
                   { name: "SEE:Frontier", handle: "@SEE_natsu", url: "#" },
                   { name: "GitHub", handle: "@natsu-kitsuragi", url: "https://github.com/natsu-kitsuragi" },
@@ -377,6 +372,8 @@ export default function Home() {
                   <Link
                     key={social.name}
                     href={social.url}
+                    target={social.url.startsWith("http") ? "_blank" : "_self"}
+                    rel={social.url.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="group p-4 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-300 hover:shadow-sm"
                   >
                     <div className="space-y-2">
