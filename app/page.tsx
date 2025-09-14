@@ -1,11 +1,14 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true)
   const [activeSection, setActiveSection] = useState("")
+  const [showWeChatModal, setShowWeChatModal] = useState(false)
   const sectionsRef = useRef<(HTMLElement | null)[]>([])
 
   useEffect(() => {
@@ -220,12 +223,14 @@ export default function Home() {
                   excerpt: "AI玩具与AIGC潮玩，是被资本市场和商业化同时验证过的道路",
                   date: "9月 2025",
                   readTime: "文章",
+                  href: "/article/ai-toys-future-202509",
                 },
                 {
                   title: "Vibe Coding之后，我们离Vibe Working还有多远？",
                   excerpt: "氛围化工作的未来范式——Agent is all you need...",
                   date: "7月 2025年",
                   readTime: "文章",
+                  href: "/article/vibe-working-202507",
                 },
                 {
                   title: "出席首届清华大学临床医学创新转化大赛启动仪式",
@@ -233,6 +238,7 @@ export default function Home() {
                     "作为受邀项目组对毛细血管再充盈时间（CRT，Capillary Refill Time）的临床意义及商业化前景作专题分享",
                   date: "8月 2024年",
                   readTime: "事件",
+                  href: "/article/tsinghua-crt-roadshow-202408",
                 },
                 {
                   title: "资本市场尽职调查Web SaaS——底稿易ddduck发布",
@@ -240,54 +246,62 @@ export default function Home() {
                     "底稿易ddDuck为开源项目ddease的Web SaaS商业化产品。截至目前，已帮助数千名用户解放上万Dirty Work工时",
                   date: "5月 2024年",
                   readTime: "项目",
+                  href: "https://ddduck.com",
                 },
                 {
                   title: "出席法治日报2023-2024法律服务创新产品论坛",
-                  excerpt: "作为代表案例荣膺首届法律服务创新产品之“律师与律师事务所赋能创新产品”名单",
+                  excerpt: "底稿易ddease作为代表案例荣膺首届法律服务创新产品名单",
                   date: "1月 2024年",
                   readTime: "事件",
+                  href: "https://mp.weixin.qq.com/s/2JHcM0LaWLHpp3l5tiQuUQ",
                 },
                 {
                   title: "资本市场尽职调查本地部署软件——底稿易ddease开源",
                   excerpt: "作为联合创始人宣布开源后，于当年收获2w用户，并于小红书等社交媒体收获超1万点赞与收藏",
                   date: "7月 2022年",
                   readTime: "项目",
+                  href: "https://mp.weixin.qq.com/s/-D_bbT3JFjESFC-oe54uDQ",
                 },
               ].map((post, index) => (
-                <article
+                <Link
                   key={index}
-                  className="group p-6 sm:p-8 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg cursor-pointer"
+                  href={post.href}
+                  target={post.href.startsWith("http") ? "_blank" : "_self"}
+                  rel={post.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="h-full"
                 >
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between text-xs text-muted-foreground font-mono">
-                      <span>{post.date}</span>
-                      <span>{post.readTime}</span>
+                  <article className="group p-6 sm:p-8 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg cursor-pointer h-full flex flex-col">
+                    <div className="space-y-4 flex-1">
+                      <div className="flex items-center justify-between text-xs text-muted-foreground font-mono">
+                        <span>{post.date}</span>
+                        <span>{post.readTime}</span>
+                      </div>
+
+                      <h3 className="text-lg sm:text-xl font-medium group-hover:text-muted-foreground transition-colors duration-300">
+                        {post.title}
+                      </h3>
+
+                      <p className="text-muted-foreground leading-relaxed text-sm flex-1">{post.excerpt}</p>
+
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300 mt-auto">
+                        <span>Read more</span>
+                        <svg
+                          className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                          />
+                        </svg>
+                      </div>
                     </div>
-
-                    <h3 className="text-lg sm:text-xl font-medium group-hover:text-muted-foreground transition-colors duration-300">
-                      {post.title}
-                    </h3>
-
-                    <p className="text-muted-foreground leading-relaxed text-sm">{post.excerpt}</p>
-
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                      <span>Read more</span>
-                      <svg
-                        className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </article>
+                  </article>
+                </Link>
               ))}
             </div>
           </div>
@@ -308,7 +322,27 @@ export default function Home() {
                     href="mailto:info@xiajianting.com"
                     className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
                   >
-                    <span className="text-base sm:text-lg">info@xiajianting.com</span>
+                    <span
+                      className="text-base sm:text-lg"
+                      onClick={() => (window.location.href = "mailto:info@xiajianting.com")}
+                    >
+                      邮箱：info@xiajianting.com
+                    </span>
+                    <svg
+                      className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
+
+                  <Link className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300">
+                    <span onClick={() => setShowWeChatModal(true)} className="text-base sm:text-lg">
+                      微信：natsu_go
+                    </span>
+
                     <svg
                       className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
                       fill="none"
@@ -323,7 +357,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-6 sm:space-y-8">
-              <div className="text-sm text-muted-foreground font-mono">{"test@example.com\n11111111"}</div>
+              <div className="text-sm text-muted-foreground font-mono"> </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
@@ -339,9 +373,6 @@ export default function Home() {
                   },
                   { name: "SEE:Frontier", handle: "@SEE_natsu", url: "#" },
                   { name: "GitHub", handle: "@natsu-kitsuragi", url: "https://github.com/natsu-kitsuragi" },
-
-
-
                 ].map((social) => (
                   <Link
                     key={social.name}
@@ -389,7 +420,8 @@ export default function Home() {
                 ) : (
                   <svg
                     className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                    fill="currentColor"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 20 20"
                   >
                     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
@@ -398,7 +430,7 @@ export default function Home() {
               </button>
 
               <button
-                onClick={() => (window.location.href = "mailto:xiajianting_work@outlook.com")}
+                onClick={() => setShowWeChatModal(true)}
                 className="group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300"
               >
                 <svg
@@ -421,6 +453,22 @@ export default function Home() {
       </main>
 
       <div className="fixed bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none"></div>
+
+      <Dialog open={showWeChatModal} onOpenChange={setShowWeChatModal}>
+        <DialogContent className="max-w-sm rounded-2xl p-6">
+          <div className="flex flex-col items-center space-y-4">
+            <Image
+              src="/wechat-qrcode.jpg"
+              alt="WeChat QR Code"
+              width={320}
+              height={320}
+              className="w-full max-w-[320px] h-auto rounded-lg"
+              priority
+            />
+            <p className="text-sm text-muted-foreground text-center">长按/扫码添加微信</p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }
