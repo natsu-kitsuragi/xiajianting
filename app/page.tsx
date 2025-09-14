@@ -305,10 +305,10 @@ export default function Home() {
 
                 <div className="space-y-4">
                   <Link
-                    href="mailto:test@example.com"
+                    href="mailto:info@xiajianting.com"
                     className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
                   >
-                    <span className="text-base sm:text-lg">test@example.com</span>
+                    <span className="text-base sm:text-lg">info@xiajianting.com</span>
                     <svg
                       className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
                       fill="none"
@@ -338,11 +338,10 @@ export default function Home() {
                     url: "https://www.feishu.cn/invitation/page/add_contact/?token=a42q9cfc-4d20-4015-a0ca-5e289ae90179&amp;unique_id=NHwX6tl7z5bfrsIF-ygypg==",
                   },
                   { name: "SEE:Frontier", handle: "@SEE_natsu", url: "#" },
-                  { name: "GitHub", handle: "@natsu-kitsuragi", url: "#" },
+                  { name: "GitHub", handle: "@natsu-kitsuragi", url: "https://github.com/natsu-kitsuragi" },
 
 
 
-                 
                 ].map((social) => (
                   <Link
                     key={social.name}
