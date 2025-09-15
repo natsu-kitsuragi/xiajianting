@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/xiajianting.com' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/xiajianting.com' : '',
+  basePath: '/xiajianting',
+  assetPrefix: '/xiajianting/',
   eslint: {
     ignoreDuringBuilds: true,
   },
