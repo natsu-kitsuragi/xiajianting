@@ -166,7 +166,7 @@ export default function Home() {
                 {
                   year: "2021-至今",
                   role: "Co-Founder",
-                  company: "资本市场尽职调查Web SaaS——底稿易ddduck",
+                  company: "资本市场尽职调查Web SaaS——底稿易ddDuck",
                   description:
                     "作为创始人发布并开源产品。截至目前, 底稿易用户已过2万，用户群体覆盖三中一华、红圈所等资本市场头部中介机构",
                   tech: ["创始人"],
@@ -241,7 +241,7 @@ export default function Home() {
                   href: "/article/tsinghua-crt-roadshow-202408",
                 },
                 {
-                  title: "资本市场尽职调查Web SaaS——底稿易ddduck发布",
+                  title: "资本市场尽职调查Web SaaS——底稿易ddDuck发布",
                   excerpt:
                     "底稿易ddDuck为开源项目ddease的Web SaaS商业化产品。截至目前，已帮助数千名用户解放上万Dirty Work工时",
                   date: "5月 2024年",
