@@ -220,14 +220,14 @@ export default function Home() {
               {[
                 {
                   title: "消费观察 | 眼下AI玩具只剩下两种可能",
-                  excerpt: "AI玩具与AIGC潮玩，是被资本市场和商业化同时验证过的道路",
+                  excerpt: "AI玩具与AIGC潮玩，是被资本市场和商业化同时验证过的道路（页面部署中）",
                   date: "9月 2025",
                   readTime: "文章",
                   href: "/article/ai-toys-future-202509",
                 },
                 {
                   title: "Vibe Coding之后，我们离Vibe Working还有多远？",
-                  excerpt: "氛围化工作的未来范式——Agent is all you need...",
+                  excerpt: "氛围化工作的未来范式——Agent is all you need...（页面部署中）",
                   date: "7月 2025年",
                   readTime: "文章",
                   href: "/article/vibe-working-202507",
@@ -366,7 +366,7 @@ export default function Home() {
                     handle: "@夏健庭",
                     url: "https://www.feishu.cn/invitation/page/add_contact/?token=a42q9cfc-4d20-4015-a0ca-5e289ae90179&unique_id=NHwX6tl7z5bfrsIF-ygypg==",
                   },
-                  { name: "SEE:Frontier", handle: "@SEE_natsu", url: "#" },
+                  { name: "SEE:Frontier", handle: "@SEE_natsu", url: "https://mp.weixin.qq.com/s/cSG3sswX3ASgJBY3KbRjIg" },
                   { name: "GitHub", handle: "@natsu-kitsuragi", url: "https://github.com/natsu-kitsuragi" },
                 ].map((social) => (
                   <Link

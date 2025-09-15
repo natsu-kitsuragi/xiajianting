@@ -1,6 +1,6 @@
 # Minimalist Profile Website
 
-一个简洁、现代的个人网站，使用Vibe Coding构建，用于展示夏健庭的个人Profile
+一个简洁、现代的作品集网站，使用Vibe Coding构建，用于展示夏健庭的个人Profile
 
 ## ✨ Features
 
