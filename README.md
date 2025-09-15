@@ -1,6 +1,6 @@
-# Minimalist Portfolio Website
+# Minimalist Profile Website
 
-A clean, modern portfolio website built with Next.js and Tailwind CSS, featuring smooth animations and dark/light theme support.
+一个简洁、现代的作品集网站，使用Vibe Coding构建，用于展示夏健庭的个人Profile
 
 ## ✨ Features
 
@@ -17,33 +17,8 @@ A clean, modern portfolio website built with Next.js and Tailwind CSS, featuring
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
 - [v0.dev](https://v0.dev/) - AI-powered development
 
-## 📦 Getting Started
-
-\`\`\`bash
-# Clone the repository
-git clone https://github.com/felixmacaspac/v0-minimalist-portfolio.git
-
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-\`\`\`
-
 Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
-
-## 🎨 Customization
-
-The portfolio is designed to be easily customizable:
-
-- Update personal information in `app/page.tsx`
-- Modify colors and styling in `app/globals.css`
-- Add or remove sections as needed
-
-## 📄 License
-
-Open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Built with ❤️ using [v0.dev](https://v0.dev) by Felix Macaspac**
+**Built with Vibe Coding**
