@@ -17,6 +17,8 @@
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
 - [v0.dev](https://v0.dev/) - AI-powered development
 
+Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+
 ---
 
 **Built with Vibe Coding**
