@@ -1,0 +1,97 @@
+# Sample workflow for building and deploying a Next.js site to GitHub Pages构建和部署Next.js站点到GitHub Pages的示例工作流
+#
+# To get started with Next.js see: https://nextjs.org/docs/getting-started#要开始使用Next.js，请参见：https:/# To get started with Next.js see: https:/
+extjs.org/docs/getting-started#要开始使用Next.js，请参见：https:/
+extjs.org/docs/getting-started
+#
+name: Deploy Next.js site to Pages将Next.js站点部署到Pages
+
+on:   :   ::
+  # Runs on pushes targeting the default branch#针对默认分支推送运行
+  push:   推动:
+    branches: ["main"]   分支机构(“主要”):
+
+  # Allows you to run this workflow manually from the Actions tab#允许您从Actions选项卡手动运行此工作流
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages#设置GITHUB_TOKEN的权限，允许部署到GitHub页面
+permissions:   权限:
+  contents: read   内容:读
+  pages: write   页:写
+  id-token: write   id-token:写
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.#只允许一个并发部署，跳过正在运行和最新队列之间的运行队列。
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.但是，不要取消正在进行的运行，因为我们希望这些生产部署能够完成。
+concurrency:   并发性:
+  group: "pages"   组:“页面”
+  cancel-in-progress: false   cancel-in-progress:假
+
+jobs:   工作:
+  # Build job   #构建任务
+  build:   构建:
+    runs-on: ubuntu-latest   上运行:ubuntu-latest
+    steps:   步骤:
+      - name: Checkout   -名称：Checkout
+        uses: actions/checkout@v4   用途:行动/ checkout@v4
+      - name: Detect package manager—name：检测包管理器
+        id: detect-package-manager
+        run: |   运行:|
+          if [ -f "${{ github.workspace }}/yarn.lock" ]; then如果[-f "${{github。工作区}}/纱。锁”);然后
+            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            echo "runner=yarn" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/package.json" ]; then
+            echo "manager=npm" >> $GITHUB_OUTPUT
+            echo "command=ci" >> $GITHUB_OUTPUT
+            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
+            exit 0
+          else
+            echo "Unable to determine package manager"
+            exit 1
+          fi
+      - name: Setup Node   —name：设置节点
+        uses: actions/setup-node@v4用途:行动/ setup-node@v4
+        with:
+          node-version: "20"
+          cache: $缓存：${{steps.detect-package-manager.output .manager}}{{ steps.detect-package-manager.outputs.manager }}
+      - name: Setup Pages   —name：设置页面
+        uses: actions/configure-pages@v5用途:行动/ configure-pages@v5
+        with:
+          #在Next.js配置文件中自动注入basePath并禁用# Automatically inject basePath in your Next.js configuration file and disable
+          #服务器端镜像优化（https:/
+extjs.org/docs/api-reference
+ext/image#unoptimized）。# server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+          #
+          #如果您想自己管理配置，可以删除这一行。# You may remove this line if you want to manage the configuration yourself.
+          static_site_generator: nextstatic_site_generator:下一个
+      - name: Restore cache   —name：恢复缓存
+        uses: actions/cache@v4   用途:行动/ cache@v4
+        with:
+          path: |
+            .next/cache
+          当包或源文件更改时，生成一个新的缓存。# Generate a new cache whenever packages or source files change.
+          key: $关键字：${{runner。os}}-nextjs-${{hashFiles（'**/package-lock. js '）json”、“* * /纱。${{hashFiles('**. lock')}}(jt)年代”、“* *。(jt) sx)}}{{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          如果源文件改变了，但是包没有改变，从先前的缓存重新构建。# If source files changed but packages didn't, rebuild from a prior cache.
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+      - name: Install dependencies
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Build with Next.js
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest   上运行:ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
