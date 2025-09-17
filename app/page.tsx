@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { useRouter } from 'next/router'
 import { useEffect, useRef, useState } from "react"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 
@@ -39,9 +38,7 @@ export default function Home() {
   const toggleTheme = () => {
     setIsDark(!isDark)
   }
-
-  const { basePath } = useRouter()
-
+  
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
@@ -458,7 +455,7 @@ export default function Home() {
         <DialogContent className="max-w-sm rounded-2xl p-6">
           <div className="flex flex-col items-center space-y-4">
             <Image
-              src={`${basePath}/wechat-qrcode.jpg`}
+              src={`/wechat-qrcode.jpg`}
               alt="WeChat QR Code"
               width={320}
               height={320}
