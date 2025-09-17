@@ -27,15 +27,6 @@ jobs:
         with:
           node-version: "20"
           cache: pnpm
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: nextstatic_site_generator
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            .next/cache
       - name: Install dependencies
         run: pnpm install
       - name: Build with Next.js
