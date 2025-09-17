@@ -10,7 +10,9 @@ const nextConfig = {
     unoptimized: true,
   },
   output: "export",
-  trailingSlash: true
+  trailingSlash: true,
+  basePath: '/xiajianting', // MUST match your repo name
+  assetPrefix: '/xiajianting/', // also MUST match repo name
 }
 
 export default nextConfig
