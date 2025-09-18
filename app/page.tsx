@@ -250,7 +250,7 @@ export default function Home() {
                 },
                 {
                   title: "出席法治日报2023-2024法律服务创新产品论坛",
-                  excerpt: "底稿易ddease作为代表案例荣膺首届法律服务创新产品名单",
+                  excerpt: "底稿易ddease作为代表案例荣膺《法治日报》首届法律服务创新产品名单",
                   date: "1月 2024年",
                   readTime: "事件",
                   href: "https://mp.weixin.qq.com/s/2JHcM0LaWLHpp3l5tiQuUQ",
