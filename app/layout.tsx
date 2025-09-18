@@ -10,7 +10,7 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: "夏健庭 - XIA JIANTING's PROFILE",
+  title: "XIA JIANTING's PROFILE",
   description: "XIA JIANTING's PROFILE",
   generator: "v0.app",
 }
