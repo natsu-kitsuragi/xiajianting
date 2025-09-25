@@ -219,11 +219,11 @@ export default function Home() {
             <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
               {[
                 {
-                  title: "消费观察 | 眼下AI玩具只剩下两种可能",
-                  excerpt: "AI玩具与AIGC潮玩，是被资本市场和商业化同时验证过的道路（页面部署中）",
+                  title: "SEE Prod. | AIGC潮玩是一级市场下个Labubu代餐吗？",
+                  excerpt: "AI玩具与AIGC潮玩，是被资本市场和商业化同时验证过的道路",
                   date: "9月 2025",
                   readTime: "文章",
-                  href: "/article/ai-toys-future-202509",
+                  href: "https://mp.weixin.qq.com/s/k-YLTvL_UKM_apbjTG1aKw",
                 },
                 {
                   title: "Vibe Coding之后，我们离Vibe Working还有多远？",
