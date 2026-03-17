@@ -126,7 +126,7 @@ export default function Home() {
           <div className="space-y-12 sm:space-y-16">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <h2 className="text-3xl sm:text-4xl font-light">工作经历</h2>
-              <div className="text-sm text-muted-foreground font-mono">2021 — 2025</div>
+              <div className="text-sm text-muted-foreground font-mono">2021 — 2026</div>
             </div>
 
             <div className="space-y-8 sm:space-y-12">
@@ -220,18 +220,18 @@ export default function Home() {
             <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
               {[
                 {
-                  title: "消费观察 | 眼下AI玩具只剩下两种可能",
-                  excerpt: "AI玩具与AIGC潮玩，是被资本市场和商业化同时验证过的道路（页面部署中）",
-                  date: "9月 2025",
-                  readTime: "文章",
-                  href: "/article/ai-toys-future-202509",
-                },
-                {
                   title: "Vibe Coding之后，我们离Vibe Working还有多远？",
                   excerpt: "氛围化工作的未来范式——Agent is all you need...（页面部署中）",
                   date: "7月 2025年",
                   readTime: "文章",
                   href: "/article/vibe-working-202507",
+                },
+                {
+                  title: "消费观察 | 眼下AI玩具只剩下两种可能",
+                  excerpt: "AI玩具与AIGC潮玩，是被资本市场和商业化同时验证过的道路（页面部署中）",
+                  date: "9月 2025",
+                  readTime: "文章",
+                  href: "/article/ai-toys-future-202509",
                 },
                 {
                   title: "出席首届清华大学临床医学创新转化大赛启动仪式",
