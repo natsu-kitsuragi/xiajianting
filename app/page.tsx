@@ -130,6 +130,20 @@ export default function Home() {
             </div>
 
             <div className="space-y-8 sm:space-y-12">
+             {[
+                {
+                  year: "2025-至今",
+                  role: "投资经理",
+                  company: "中财金控投资有限公司",
+                  description: (
+                    <>
+                      深度参与某基础大模型项目 <strong>30 亿天使轮融资</strong>， 覆盖项目尽调、估值、交易与交割全流程，
+                      熟悉<strong>一级市场业务要点</strong>
+                    </>
+                  ),
+                  tech: ["项目获取", "行业分析", "尽职调查", "交易谈判", "投后管理"],
+                },
+             
               {[
                 {
                   year: "2023-2025",
