@@ -131,18 +131,7 @@ export default function Home() {
 
             <div className="space-y-8 sm:space-y-12">
               {[
-                {
-                  year: "2025-至今",
-                  role: "股权承做111111",
-                  company: "国投证券股份有限公司·上海投资银行二部（TMT组）",
-                  description: (
-                    <>
-                      深度参与多家硬科技企业IPO<strong>招股书及答反馈事项写作</strong>
-                      ，协助完成业务、技术与合规等部分尽调与撰写，支持公司信息披露达标监管要求
-                    </>
-                  ),
-                  tech: ["招股书写作", "法律研究", "访谈核查"],
-                },
+              
                 {
                   year: "2023-2025",
                   role: "投资经理",
