@@ -132,6 +132,13 @@ export default function Home() {
             <div className="space-y-8 sm:space-y-12">
               {[
                 {
+                  year: "2025-至今",
+                  role: "职位名称",
+                  company: "公司名称",
+                  description: "工作描述，请在此处填写您的工作内容与成就。",
+                  tech: ["标签一", "标签二"],
+                },
+                {
                   year: "2023-2025",
                   role: "投资经理",
                   company: "中财金控投资有限公司",
