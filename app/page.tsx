@@ -150,7 +150,7 @@ export default function Home() {
                   description: (
                     <>
                       深度参与多家硬科技企业IPO<strong>招股书及答反馈事项写作</strong>
-                      ，协助完成第五节（业务与技术）等部分调研与撰写，支持公司信息披露达标监管要求
+                      ，协助完成业务、技术与合规等部分尽调与撰写，支持公司信息披露达标监管要求
                     </>
                   ),
                   tech: ["招股书写作", "法律研究", "访谈核查"],
@@ -219,18 +219,18 @@ export default function Home() {
             <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
               {[
                 {
+                  title: "传统企业资本市场忽悠手册",
+                  excerpt: "资本市场练习时长两年半成果总结",
+                  date: "11月 2025年",
+                  readTime: "文章",
+                  href: "https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzk0MDg4MzcyNw==&action=getalbum&album_id=4239458105827704833&from_itemidx=1&from_msgid=2247484050&subscene=0&scenenote=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzk0MDg4MzcyNw%3D%3D%26mid%3D2247484050%26idx%3D1%26sn%3Dddf2c9b5e55adc425f704870c06c3b8c%26chksm%3Dc3be6524426635e5fd6ecb3d4ae4e298a1096486c75da5a6fae9598205a24ac91cfb87dbd257%26xtrack%3D1%26scene%3D0%26subscene%3D126%26sessionid%3D1773750404%26clicktime%3D1773759805%26enterid%3D1773759805%26ascene%3D7%26fasttmpl_type%3D0%26fasttmpl_fullversion%3D8174020-zh_CN-zip%26fasttmpl_flag%3D0%26realreporttime%3D1773759805578%26devicetype%3Dandroid-35%26version%3D28003d5b%26nettype%3Dcbnet%26lang%3Dzh_CN%26session_us%3Dgh_18f0237bd7f1%26countrycode%3DCN%26exportkey%3Dn_ChQIAhIQe91aE2viryP6sHFSxAWIfxLxAQIE97dBBAEAAAAAAF5sBZZVmWwAAAAOpnltbLcz9gKNyK89dVj0nhxObRieHGDwoRq1Dh4k8bbtvX3h4MhukiUiF5CddZoLP4AwYHNVuMhB5SngIoO%252B%252Fu8djDxumIannb0BYrILJWxvJbXyFSHdd0WxI63txLgxRkuVmULJ1Go08BvyHBkYeMdC8NtJI4zz8YrrFEhB%252F2TpCfw4FqNnn68kzXApSJY3e9W8FAXimFmGkEdCHQkeDbQRaY%252FxO7laScKS3UYaxUnVtuTKI%252B%252B42LgAA2cl%252F0mf6fd1F5eGvoWHiXDW7p72zdE6nVb9Bo18%252B%252F0%253D%26pass_ticket%3DsB%252Br3yUfkcfAgJxNVvLmluEIvcazj07CQznsFU%252Fg%252FqH4bKVN6AKZGDCFrnUh6Jjs%26wx_header%3D3&nolastread=1#wechat_redirect",
+                },
+                {
                   title: "SEE Prod. | AIGC潮玩是一级市场下个Labubu代餐吗？",
                   excerpt: "AI玩具与AIGC潮玩，是被资本市场和商业化同时验证过的道路",
                   date: "9月 2025",
                   readTime: "文章",
                   href: "https://mp.weixin.qq.com/s/k-YLTvL_UKM_apbjTG1aKw",
-                },
-                {
-                  title: "Vibe Coding之后，我们离Vibe Working还有多远？",
-                  excerpt: "氛围化工作的未来范式——Agent is all you need...（页面部署中）",
-                  date: "7月 2025年",
-                  readTime: "文章",
-                  href: "/article/vibe-working-202507",
                 },
                 {
                   title: "出席首届清华大学临床医学创新转化大赛启动仪式",
