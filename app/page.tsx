@@ -38,7 +38,7 @@ export default function Home() {
   const toggleTheme = () => {
     setIsDark(!isDark)
   }
-  
+
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
@@ -130,8 +130,6 @@ export default function Home() {
             </div>
 
             <div className="space-y-8 sm:space-y-12">
-          
-             
               {[
                 {
                   year: "2023-2025",
@@ -152,7 +150,7 @@ export default function Home() {
                   description: (
                     <>
                       深度参与多家硬科技企业IPO<strong>招股书及答反馈事项写作</strong>
-                      ，协助完成业务、技术、与合规等部分尽调与写作，支持公司信息披露达标监管要求
+                      ，协助完成第五节（业务与技术）等部分调研与撰写，支持公司信息披露达标监管要求
                     </>
                   ),
                   tech: ["招股书写作", "法律研究", "访谈核查"],
@@ -170,7 +168,7 @@ export default function Home() {
                   role: "Co-Founder",
                   company: "资本市场尽职调查Web SaaS——底稿易ddDuck",
                   description:
-                    "作为创始人发布并开源产品。截至目前, 底稿易用户已过3万，用户群体覆盖三中一华、红圈所等资本市场头部中介机构",
+                    "作为创始人发布并开源产品。截至目前, 底稿易用户已过2万，用户群体覆盖三中一华、红圈所等资本市场头部中介机构",
                   tech: ["创始人"],
                 },
               ].map((job, index) => (
@@ -221,11 +219,11 @@ export default function Home() {
             <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
               {[
                 {
-                  title: "SEE Prod. | AIGC潮玩是一级市场下个Labubu代餐吗？",
-                  excerpt: "AI玩具与AIGC潮玩，是被资本市场和商业化同时验证过的道路",
+                  title: "消费观察 | 眼下AI玩具只剩下两种可能",
+                  excerpt: "AI玩具与AIGC潮玩，是被资本市场和商业化同时验证过的道路（页面部署中）",
                   date: "9月 2025",
                   readTime: "文章",
-                  href: "https://mp.weixin.qq.com/s/k-YLTvL_UKM_apbjTG1aKw",
+                  href: "/article/ai-toys-future-202509",
                 },
                 {
                   title: "Vibe Coding之后，我们离Vibe Working还有多远？",
@@ -252,7 +250,7 @@ export default function Home() {
                 },
                 {
                   title: "出席法治日报2023-2024法律服务创新产品论坛",
-                  excerpt: "底稿易ddease作为代表案例荣膺《法治日报》首届法律服务创新产品名单",
+                  excerpt: "底稿易ddease作为代表案例荣膺首届法律服务创新产品名单",
                   date: "1月 2024年",
                   readTime: "事件",
                   href: "https://mp.weixin.qq.com/s/2JHcM0LaWLHpp3l5tiQuUQ",
@@ -457,7 +455,7 @@ export default function Home() {
         <DialogContent className="max-w-sm rounded-2xl p-6">
           <div className="flex flex-col items-center space-y-4">
             <Image
-              src={`/wechat-qrcode.jpg`}
+              src="/wechat-qrcode.jpg"
               alt="WeChat QR Code"
               width={320}
               height={320}
