@@ -104,7 +104,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">专注于</div>
                 <div className="flex flex-wrap gap-2">
-                  {["公司法", "资本市场运作", "品牌营销实践", "AI赋能应用", "Vibe Working"].map((skill) => (
+                  {["公司法", "资本市场运作", "品牌营销实践", "Vibe Working"].map((skill) => (
                     <span
                       key={skill}
                       className="px-3 py-1 text-xs border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
