@@ -10,9 +10,8 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: "XIA JIANTING's PROFILE",
-  description: "XIA JIANTING's PROFILE",
-  generator: "v0.app",
+  title: "夏健庭｜产业经营 · 资本运作 · 法律合规",
+  description: "夏健庭的产业经营、资本运作、法律合规与AI产品实践。",
 }
 
 export default function RootLayout({
@@ -21,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
+    <html lang="zh-CN" className={geist.variable} suppressHydrationWarning>
       <body className="font-sans antialiased">{children}</body>
     </html>
   )
