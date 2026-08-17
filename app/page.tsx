@@ -75,9 +75,9 @@ export default function Home() {
 
               <div className="space-y-6 max-w-md">
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                  致力于为企业与个人提供<span className="text-foreground">法律合规</span>
-                  、运营销售和
-                  <span className="text-foreground">资本运作</span>的
+                  致力于为企业与个人提供<span className="text-foreground">产业经营</span>、
+                  <span className="text-foreground">资本运作</span>和
+                  <span className="text-foreground">法律合规</span>的
                   <span className="text-foreground">全栈商业服务</span>。
                 </p>
 
@@ -86,7 +86,7 @@ export default function Home() {
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     Available for work
                   </div>
-                  <div>{"中国 · 广东"}</div>
+                  <div>{"浙江 · 广东"}</div>
                 </div>
               </div>
             </div>
